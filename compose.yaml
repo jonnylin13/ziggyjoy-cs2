@@ -1,0 +1,9 @@
+services:
+  cs2:
+    build: .
+    ports:
+      - 27015:27015
+    volumes:
+      - ./server:/cs2
+    env_file:
+      - .env
