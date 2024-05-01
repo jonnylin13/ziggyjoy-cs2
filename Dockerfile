@@ -16,7 +16,7 @@ RUN echo steam steam/question select "I AGREE" | debconf-set-selections && \
     ln -sf /usr/games/steamcmd /usr/bin/steamcmd && \
     DEBIAN_FRONTEND=noninteractive apt-get autoremove -q -y && \
     rm -rf /var/lib/apt/lists/* \
-    && mkdir /cs2
+    && mkdir /root/cs2
 
 RUN chmod +x ./install-cs2.sh \ 
     && ./install-cs2.sh
