@@ -18,7 +18,8 @@ RUN echo steam steam/question select "I AGREE" | debconf-set-selections && \
     rm -rf /var/lib/apt/lists/* \
     && mkdir /cs2
 
-RUN ./install-cs2.sh
+RUN chmod +x ./install-cs2.sh \ 
+    && ./install-cs2.sh
 
 RUN cd /root/.steam \
     && mkdir sdk32 \
