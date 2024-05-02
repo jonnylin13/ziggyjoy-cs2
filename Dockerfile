@@ -26,6 +26,8 @@ RUN cd /root/.steam \
     && ln -s /root/.steam/steamcmd/linux32/steamclient.so /root/.steam/sdk32/
 
 COPY start.sh .
+ADD cfg /root/cs2/csgo/cfg
+
 CMD ["bash", "start.sh"]
 
 EXPOSE 27015/tcp
